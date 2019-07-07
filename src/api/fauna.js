@@ -1,8 +1,8 @@
 import faunadb, { query as q } from "faunadb";
 
-const client = new faunadb.Client({  secret: process.env.REACT_APP_FAUNA_KEY });
+const client = new faunadb.Client({ secret: process.env.REACT_APP_FAUNA_KEY });
 
-const addNewClass = async (newClass) => {
+const addNewClass = async newClass => {
   try {
     const ret = await client.query(q.CreateClass({ name: newClass }));
     return ret;

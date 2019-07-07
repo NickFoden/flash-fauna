@@ -7,9 +7,14 @@ class Flash extends Component {
         <div className="App">
           <header className="App-header">
             <p>Flash</p>
-            <Link className="App-link" to="/">
-              Home
-            </Link>
+            <section className="flash-section">
+              <Link className="App-link" to="/">
+                Home
+              </Link>
+              <Link className="App-link" to="/new-card">
+                New
+              </Link>
+            </section>
           </header>
         </div>
       </div>
