@@ -41,10 +41,25 @@ const deleteSingleRecordByRef = async (className, itemRef) => {
   }
 };
 
+const getAllCards = async () => {
+  try {
+    const ret = await client.query(
+      q.Map(
+        q.Paginate(q.Match(q.Index("all_cards"))),
+        q.Lambda("X", q.Get(q.Var("X")))
+      )
+    );
+    return ret;
+  } catch (err) {
+    return console.error(err);
+  }
+};
+
 export {
   addNewClass,
   addSingleRecord,
   deleteSingleRecordByRef,
+  getAllCards,
   getSingleRecordByRef,
   q
 };

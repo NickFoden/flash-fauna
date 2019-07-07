@@ -14,7 +14,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,6 +68,9 @@
   font-size: 1rem;
   margin: 15px;
 }
+.new-card-body select {
+  margin-left: 15px;
+}
 .new-card-body textarea {
   background-color: white;
   font-size: 1rem;
@@ -81,4 +84,17 @@
 .new-card-header a {
   font-size: 1rem;
   margin: 25px;
+}
+
+.flash-ul {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 300px;
+}
+.flash-ul li {
+  color: white;
+}
+
+.card-container {
+  max-width: 250px;
 }
