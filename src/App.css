@@ -39,7 +39,10 @@
 .flash-section a {
   margin: 15px;
 }
-
+.footer-home {
+  font-size: 2rem;
+  margin-top: 150px;
+}
 .new-card-body {
   align-items: center;
   display: flex;

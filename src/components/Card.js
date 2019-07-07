@@ -1,7 +1,7 @@
 import React from "react";
 
-const Card = props => {
-  const { answer, link, subject } = props.item;
+const Card = ({ item }) => {
+  const { answer, link, subject } = item;
   return (
     <div className="card-container">
       <h4>{subject}:</h4>
