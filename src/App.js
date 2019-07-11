@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, Router } from "@reach/router";
 import Flash from "./pages/Flash";
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import NewCard from "./pages/NewCard";
 // import NewClass from "./pages/NewClass";

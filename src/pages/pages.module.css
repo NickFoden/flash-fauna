@@ -9,6 +9,26 @@
   --font-montserrat: 'Montserrat', sans-serif;
 }
 
+.flash_header {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.flash_header a {
+  color: var(--color-light-blue);
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: .8;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.flash_header a:hover {
+  opacity: .2;
+}
+
 .footer {
   font-size: 1.5rem;
   font-family: var(--font-rubik);

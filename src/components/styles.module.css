@@ -7,6 +7,23 @@
   --color-light-purple: #618efb;
 }
 
+.card_container a {
+  color: var(--color-light-purple);
+}
+
+.card_container p {
+  color: var(--color-light-grey);
+}
+
+.card_container h4 {
+  color: var(--color-light-blue);
+  font-size: 1.5rem;
+}
+
+.card_container a:hover {
+  opacity: .5;
+}
+
 .header h1 {
   font-size: 80px;
   background: -webkit-linear-gradient( var( --color-light-grey), var(--color-blue));

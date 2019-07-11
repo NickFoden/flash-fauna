@@ -21,6 +21,7 @@
 
 .flash-section a {
   margin: 15px;
+  color: #618efb;
 }
 
 .new-card-body {
@@ -84,7 +85,7 @@
 }
 
 .flash-ul li {
-  color: white;
+  color: #618efb;
 }
 
 .card-container {
