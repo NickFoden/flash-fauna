@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-import logo from "../logo.svg";
+import Header from "../components/Header";
+import styles from "./pages.module.css";
 class Home extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <footer className="footer-home">
-          <Link className="App-link" to="/flash">
-            Flash
-          </Link>
+      <div className={styles.home_container}>
+        <Header />
+        <h2>Ready to learn something new ? </h2>
+        <footer className={styles.footer}>
+          <Link to="/flash">Cycle Cards</Link>
+          <Link to="/flash">View Inventory</Link>
         </footer>
       </div>
     );
