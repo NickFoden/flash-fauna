@@ -29,7 +29,12 @@ function App() {
         {/* <NewClass path="/new-class" /> */}
       </Router>
       <footer className="constant_footer">
-        <a href="https://nef.dev" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://nef.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Nick is Online"
+        >
           <p>© Nick Foden {new Date().getFullYear()}</p>{" "}
         </a>
       </footer>
