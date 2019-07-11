@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "@reach/router";
 import { addSingleRecord } from "../api/fauna";
+import styles from "./pages.module.css";
 const NewCard = () => {
   const initialState = {
     answer: "",
@@ -35,48 +36,48 @@ const NewCard = () => {
     this.props.change();
   };
   return (
-    <div>
-      <header className="new-card-header">
+    <div className={styles.new_card_container}>
+      <header className={styles.flash_header}>
         <Link to="/">Home</Link>
       </header>
-      <section className="new-card-body">
+      <section className={styles.new_card_body}>
         <label>
           Type:
-          <select name="type" onChange={handleChange} value={state.type}>
-            <option value="" />
+          <select
+            name="type"
+            onChange={handleChange}
+            value={state.type}
+            className={styles.select}
+          >
+            <option value="">Choose </option>
             <option value="keyword">keyword</option>
             <option value="method">method</option>
             <option value="html">html</option>
             <option value="css">css</option>
           </select>
         </label>
-        <label>
-          Subject:
-          <input
-            name="subject"
-            type="text"
-            onChange={handleChange}
-            value={state.subject}
-          />
-        </label>
-        <label>
-          Answer:
-          <textarea
-            name="answer"
-            rows="5"
-            onChange={handleChange}
-            value={state.answer}
-          />
-        </label>
-        <label>
-          Link:
-          <input
-            name="link"
-            type="text"
-            onChange={handleChange}
-            value={state.link}
-          />
-        </label>
+        <label>Subject:</label>
+        <input
+          name="subject"
+          type="text"
+          onChange={handleChange}
+          value={state.subject}
+        />
+        <label>Answer:</label>
+        <textarea
+          name="answer"
+          rows="5"
+          onChange={handleChange}
+          value={state.answer}
+        />
+
+        <label>Link:</label>
+        <input
+          name="link"
+          type="text"
+          onChange={handleChange}
+          value={state.link}
+        />
 
         <button onClick={e => handleSubmit(e, state)}>Submit</button>
       </section>

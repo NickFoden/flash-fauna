@@ -1,0 +1,32 @@
+:root {
+  --color-blue: #5776bf;
+  --color-grey: #797a80;
+  --color-light-grey: #f8f8f8;
+  --color-purple: #5a84e8;
+  --color-light-blue: #61dafb;
+  --color-light-purple: #618efb;
+}
+
+.card_container a {
+  color: var(--color-light-purple);
+}
+
+.card_container p {
+  color: var(--color-light-grey);
+}
+
+.card_container h4 {
+  color: var(--color-light-blue);
+  font-size: 1.5rem;
+}
+
+.card_container a:hover {
+  opacity: .5;
+}
+
+.header h1 {
+  font-size: 80px;
+  background: -webkit-linear-gradient( var( --color-light-grey), var(--color-blue));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

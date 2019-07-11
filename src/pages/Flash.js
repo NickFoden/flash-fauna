@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import { getAllCards } from "../api/fauna";
 import Card from "../components/Card";
+import styles from "./pages.module.css";
 class Flash extends Component {
   componentDidMount() {
     if (!this.props.loaded) {
@@ -16,16 +17,9 @@ class Flash extends Component {
     return (
       <div>
         <div>
-          <header className="App-header">
-            <p>Flash</p>
-            <section className="flash-section">
-              <Link className="App-link" to="/">
-                Home
-              </Link>
-              <Link className="App-link" to="/new-card">
-                New
-              </Link>
-            </section>
+          <header className={styles.flash_header}>
+            <Link to="/">Home</Link>
+            <Link to="/new-card">New</Link>
           </header>
           <section className="flash-body">
             <ul className="flash-ul">
