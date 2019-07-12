@@ -5,8 +5,26 @@
   --color-purple: #5a84e8;
   --color-light-blue: #61dafb;
   --color-light-purple: #618efb;
-  --font-rubik: 'Rubik', sans-serif;
-  --font-montserrat: 'Montserrat', sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+.button {
+  background-color: var(--color-light-purple);
+  border: 1px solid var(--color-light-purple);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: var(--font-rubik);
+  font-size: 1rem;
+  margin: 100px 10px 10px 10px;
+  padding: 10px;
+}
+.button:hover {
+  opacity: 0.5;
+}
+.cycle_body {
+  margin: 100px auto 0;
+  width: 500px;
 }
 
 .flash_header {
@@ -20,13 +38,13 @@
   font-family: var(--font-montserrat);
   font-size: 1.5rem;
   font-weight: bold;
-  opacity: .8;
+  opacity: 0.8;
   padding: 15px;
   text-decoration: none;
 }
 
 .flash_header a:hover {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .footer {
@@ -50,7 +68,10 @@
 }
 
 .home_container h2 {
-  background: -webkit-linear-gradient( var(--color-light-purple), var( --color-light-grey));
+  background: -webkit-linear-gradient(
+    var(--color-light-purple),
+    var(--color-light-grey)
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -74,7 +95,7 @@
 }
 
 .new_card_body button:hover {
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .new_card_body input {
