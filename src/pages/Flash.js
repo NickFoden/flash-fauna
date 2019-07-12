@@ -27,7 +27,7 @@ class Flash extends Component {
                 const { id } = item.ref.value;
                 return (
                   <li key={id}>
-                    <Card item={item.data} />
+                    <Card item={item.data} expand={true} />
                   </li>
                 );
               })}

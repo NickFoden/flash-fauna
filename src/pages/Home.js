@@ -9,7 +9,7 @@ class Home extends Component {
         <Header />
         <h2>Ready to learn something new ? </h2>
         <footer className={styles.footer}>
-          <Link to="/flash">Cycle Cards</Link>
+          <Link to="/cycle">Cycle Cards</Link>
           <Link to="/flash">View Inventory</Link>
         </footer>
       </div>

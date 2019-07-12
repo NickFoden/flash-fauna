@@ -5,6 +5,8 @@
   --color-purple: #5a84e8;
   --color-light-blue: #61dafb;
   --color-light-purple: #618efb;
+  --font-rubik: "Rubik", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
 .card_container a {
@@ -21,12 +23,44 @@
 }
 
 .card_container a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
+.back_home {
+  background-color: var(--color-light-purple);
+  border: 1px solid var(--color-light-purple);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: var(--font-rubik);
+  font-size: 1rem;
+  margin: 100px 10px 10px 10px;
+  padding: 10px;
+  text-align: center;
+  max-width: 125px;
+}
+.back_home:hover {
+  opacity: 0.5;
+}
+.section_finished a {
+  text-decoration: none;
+}
+
+.section_finished h1 {
+  color: var(--color-light-blue);
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.8;
+  padding: 15px;
+  text-decoration: none;
+}
 .header h1 {
   font-size: 80px;
-  background: -webkit-linear-gradient( var( --color-light-grey), var(--color-blue));
+  background: -webkit-linear-gradient(
+    var(--color-light-grey),
+    var(--color-blue)
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

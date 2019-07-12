@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link, Router } from "@reach/router";
+import { Router } from "@reach/router";
+import Cycle from "./pages/Cycle";
 import Flash from "./pages/Flash";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Home from "./pages/Home";
 import NewCard from "./pages/NewCard";
 // import NewClass from "./pages/NewClass";
@@ -20,6 +21,13 @@ function App() {
         <Home path="/" />
         <Flash
           path="/flash"
+          loaded={state}
+          change={handleChange}
+          cards={currentCards || []}
+          updateCards={updateCards}
+        />
+        <Cycle
+          path="/cycle"
           loaded={state}
           change={handleChange}
           cards={currentCards || []}
