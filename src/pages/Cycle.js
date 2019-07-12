@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 import { getAllCards } from "../api/fauna";
 import Card from "../components/Card";
 import styles from "./pages.module.css";
-class Flash extends Component {
+class Cycle extends Component {
   componentDidMount() {
     if (!this.props.loaded) {
       getAllCards()
@@ -27,7 +27,7 @@ class Flash extends Component {
                 const { id } = item.ref.value;
                 return (
                   <li key={id}>
-                    <Card item={item.data} expand={true} />
+                    <Card item={item.data} />
                   </li>
                 );
               })}
@@ -39,4 +39,4 @@ class Flash extends Component {
   }
 }
 
-export default Flash;
+export default Cycle;
