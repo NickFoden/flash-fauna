@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "@reach/router";
 import { addSingleRecord } from "../api/fauna";
 import styles from "./pages.module.css";
-const NewCard = () => {
+const NewCard = props => {
+  console.log(props);
+
   const initialState = {
     answer: "",
     link: "",
@@ -29,11 +31,11 @@ const NewCard = () => {
       subject,
       type
     };
-    addSingleRecord("cards", data).then(() => {
-      updateValues(initialState);
-    });
-
-    this.props.change();
+    addSingleRecord("cards", data)
+      .then(() => {
+        updateValues(initialState);
+      })
+      .then(() => props.change());
   };
   return (
     <div className={styles.new_card_container}>

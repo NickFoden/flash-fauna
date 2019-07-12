@@ -14,7 +14,6 @@ function App() {
   const handleChange = () => {
     updateValues(!state);
   };
-
   return (
     <div>
       <Router>

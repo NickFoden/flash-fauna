@@ -8,6 +8,7 @@
   --font-rubik: "Rubik", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
 }
+
 .button {
   background-color: var(--color-light-purple);
   border: 1px solid var(--color-light-purple);
@@ -16,12 +17,14 @@
   cursor: pointer;
   font-family: var(--font-rubik);
   font-size: 1rem;
-  margin: 100px 10px 10px 10px;
+  margin: 100px 10px 10px;
   padding: 10px;
 }
+
 .button:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
+
 .cycle_body {
   margin: 100px auto 0;
   width: 500px;
@@ -38,24 +41,24 @@
   font-family: var(--font-montserrat);
   font-size: 1.5rem;
   font-weight: bold;
-  opacity: 0.8;
+  opacity: .8;
   padding: 15px;
   text-decoration: none;
 }
 
 .flash_header a:hover {
-  opacity: 0.2;
+  opacity: .2;
 }
 
 .footer {
   font-size: 1.5rem;
   font-family: var(--font-rubik);
-  margin-top: 150px;
+  margin: 150px 0;
 }
 
 .footer a {
   color: var(--color-light-blue);
-  margin: 0 15px;
+  margin: 0 25px;
   text-decoration: none;
 }
 
@@ -68,10 +71,7 @@
 }
 
 .home_container h2 {
-  background: -webkit-linear-gradient(
-    var(--color-light-purple),
-    var(--color-light-grey)
-  );
+  background: -webkit-linear-gradient( var(--color-light-purple), var(--color-light-grey) );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -86,16 +86,18 @@
 
 .new_card_body button {
   background-color: white;
-  color: black;
+  color: var(--color-light-purple);
   cursor: pointer;
   font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 75px;
   margin-top: 15px;
   padding: 10px;
   width: 150px;
 }
 
 .new_card_body button:hover {
-  opacity: 0.75;
+  opacity: .75;
 }
 
 .new_card_body input {
@@ -119,7 +121,7 @@
 
 .new_card_body textarea {
   background-color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-left: 15px;
   margin-top: 15px;
   width: 350px;
@@ -134,4 +136,34 @@
 .select {
   color: var(--color-light-purple);
   font-size: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  .cycle_body {
+    margin: 100px auto 0;
+    width: 400px;
+  }
+
+  .new_card_body {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .cycle_body {
+    margin: 100px auto 0;
+    width: 350px;
+  }
+
+  .new_card_body {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .cycle_body {
+    margin: 100px auto 0;
+    width: 300px;
+  }
+
+  .new_card_body {
+    width: 350px;
+  }
 }
