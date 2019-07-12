@@ -39,7 +39,6 @@ class Cycle extends Component {
         <div>
           <header className={styles.flash_header}>
             <Link to="/">Home</Link>
-            <Link to="/new-card">New</Link>
           </header>
           <section className={styles.cycle_body}>
             {currentCard < cards.length ? (
@@ -47,13 +46,12 @@ class Cycle extends Component {
                 {cards[currentCard] && (
                   <Card item={cards[currentCard]["data"]} expand={show} />
                 )}
-                {!show && (
+                {!show ? (
                   <button onClick={this.show} className={styles.button}>
                     {" "}
                     Show Answer
                   </button>
-                )}
-                {show && (
+                ) : (
                   <button onClick={this.next} className={styles.button}>
                     {" "}
                     Next Question

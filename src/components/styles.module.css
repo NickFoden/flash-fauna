@@ -23,7 +23,13 @@
 }
 
 .card_container a:hover {
-  opacity: 0.5;
+  opacity: .5;
+}
+
+.card_type {
+  color: var(--color-light-purple);
+  font-weight: lighter;
+  font-size: .9rem;
 }
 
 .back_home {
@@ -34,14 +40,16 @@
   cursor: pointer;
   font-family: var(--font-rubik);
   font-size: 1rem;
-  margin: 100px 10px 10px 10px;
+  margin: 100px 10px 10px;
   padding: 10px;
   text-align: center;
   max-width: 125px;
 }
+
 .back_home:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
+
 .section_finished a {
   text-decoration: none;
 }
@@ -51,16 +59,14 @@
   font-family: var(--font-montserrat);
   font-size: 1.5rem;
   font-weight: bold;
-  opacity: 0.8;
+  opacity: .8;
   padding: 15px;
   text-decoration: none;
 }
+
 .header h1 {
   font-size: 80px;
-  background: -webkit-linear-gradient(
-    var(--color-light-grey),
-    var(--color-blue)
-  );
+  background: -webkit-linear-gradient( var(--color-light-grey), var(--color-blue) );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
