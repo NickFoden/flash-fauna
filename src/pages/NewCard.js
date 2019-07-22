@@ -3,8 +3,6 @@ import { Link } from "@reach/router";
 import { addSingleRecord } from "../api/fauna";
 import styles from "./pages.module.css";
 const NewCard = props => {
-  console.log(props);
-
   const initialState = {
     answer: "",
     link: "",

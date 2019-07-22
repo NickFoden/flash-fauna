@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "@reach/router";
-import { addNewClass } from "../api/fauna";
+import { addNewCollection } from "../api/fauna";
 const NewClass = () => {
   const [state, updateValues] = useState({});
 
@@ -14,7 +14,7 @@ const NewClass = () => {
 
   const handleSubmit = (e, state) => {
     e.preventDefault();
-    addNewClass(state.class);
+    addNewCollection(state.class);
   };
   return (
     <div>

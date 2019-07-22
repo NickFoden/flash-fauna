@@ -2,37 +2,41 @@ import faunadb, { query as q } from "faunadb";
 
 const client = new faunadb.Client({ secret: process.env.REACT_APP_FAUNA_KEY });
 
-const addNewClass = async newClass => {
+const addNewCollection = async newCollection => {
   try {
-    const ret = await client.query(q.CreateClass({ name: newClass }));
+    const ret = await client.query(q.CreateCollection({ name: newCollection }));
     return ret;
   } catch (err) {
     return console.error(err);
   }
 };
 
-const addSingleRecord = async (className, data) => {
-  try {
-    const ret = await client.query(q.Create(q.Class(className), { data }));
-    return ret;
-  } catch (err) {
-    return console.error(err);
-  }
-};
-
-const getSingleRecordByRef = async (className, itemRef) => {
-  try {
-    const ret = await client.query(q.Get(q.Ref(q.Class(className), itemRef)));
-    return ret;
-  } catch (err) {
-    return console.error(err);
-  }
-};
-
-const deleteSingleRecordByRef = async (className, itemRef) => {
+const addSingleRecord = async (collectionName, data) => {
   try {
     const ret = await client.query(
-      q.Delete(q.Ref(q.Class(className), itemRef))
+      q.Create(q.Collection(collectionName), { data })
+    );
+    return ret;
+  } catch (err) {
+    return console.error(err);
+  }
+};
+
+const getSingleRecordByRef = async (collectionName, itemRef) => {
+  try {
+    const ret = await client.query(
+      q.Get(q.Ref(q.Collection(collectionName), itemRef))
+    );
+    return ret;
+  } catch (err) {
+    return console.error(err);
+  }
+};
+
+const deleteSingleRecordByRef = async (collectionName, itemRef) => {
+  try {
+    const ret = await client.query(
+      q.Delete(q.Ref(q.Collection(collectionName), itemRef))
     );
     console.log("Deleted: " + itemRef);
     return ret;
@@ -56,7 +60,7 @@ const getAllCards = async () => {
 };
 
 export {
-  addNewClass,
+  addNewCollection,
   addSingleRecord,
   deleteSingleRecordByRef,
   getAllCards,
